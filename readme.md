@@ -1,4 +1,4 @@
-## Twitter API and Postgres Application
+# Twitter API and Postgres Application
 
 This repository is an example for querying the Twitter API and storing the data in a Postgres database. This way you can analyze tweets and create network studies.
 My article on medium.com covers this project [in German language](https://medium.com/@stefan.preusler/twitter-api-und-postgres-implementierung-mittels-aws-rds-und-ec2-8be23708aec).
