@@ -9,7 +9,7 @@ Install libraries referenced in requirements.txt
 
 ## 2. Instructions
 
-### 2. 1 Configuration files
+### 2.1 Configuration files
 
 `config_demo.py` includes examples for the desired Twitter keywords, Twitter API and Postgres credentials. Copy the file, rename it to `config.py` and store your personal data.
 
