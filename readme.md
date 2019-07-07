@@ -7,6 +7,8 @@ My article on medium.com covers this project [in German language](https://medium
 
 Install libraries referenced in requirements.txt
 
+`pip install -r projects/tweets/requirements.txt`
+
 ## 2. Instructions
 
 ### 2.1 Configuration files
