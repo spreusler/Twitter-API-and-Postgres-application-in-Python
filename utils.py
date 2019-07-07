@@ -39,13 +39,19 @@ class Keyword:
             location = tweet.user.location
             follower_count = tweet.user.followers_count
             friends_count = tweet.user.friends_count
-
+            truncated = tweet.truncated
+            retweet_count = tweet.retweet_count
+            reply_to_status_id = tweet.in_reply_to_status_id_str
+            reply_to_user_id = tweet.in_reply_to_user_id_str
             try:
                 # Create Dataframe from entries
                 df = pd.DataFrame()
-                df = df.append({'tweet_id': tweet_id, 'user_id': user_id, 'user_name': user_name, 'text': text, 'time': time,
-                                'location': location, 'follower_count': follower_count, 'tweet_keyword': self.keyword,
-                                'friends_count': friends_count}, ignore_index=True)
+                df = df.append({'tweet_id': tweet_id, 'user_id': user_id, 'user_name': user_name,
+                                'text': text, 'time': time, 'location': location, 'follower_count': follower_count,
+                                'tweet_keyword': self.keyword, 'friends_count': friends_count,
+                                'truncated': truncated, 'retweet_count': retweet_count,
+                                'reply_to_status_id': reply_to_status_id,
+                                'reply_to_user_id': reply_to_user_id}, ignore_index=True)
 
                 # Commit do database
                 df.to_sql(config.db_table, engine, if_exists='append', index=False)
